@@ -1,0 +1,180 @@
+#Ejercio16 Elkin Diaz
+Lista=[1, 3, 2, 7, 9, 8, 6 ]
+x=4 in Lista
+y=3 in Lista
+z=4 not in Lista
+print (x)
+print (y)
+print (z)
+
+#Ejercio17 Elkin Diaz
+x=4
+y=2
+lista=[ 1, 5 ]
+a=x is lista 
+b=x is y 
+c=x is 4 
+print (a)
+print (b)
+print (c)
+
+#Ejercio18 Elkin Diaz
+print ("Hola mundito :3" )
+"Esto es solo un comentario, Adios mundito :C"
+"""Hola que 
+tal que hace
+s
+s
+s
+s
+"""
+
+
+#Ejercio19 Elkin Diaz
+#Tipos de datos
+
+a=-1 #a es tipo int y su valor es -1
+b=a+2 #b es de tipo int y su valor es 1
+print ("b : a + 2 = ", b )
+
+c=1.1+2.2
+print("c: 1.1 + 2.2 = ", c)
+
+#Ejercio20 Elkin Diaz
+real=1.1 + 2.2 #Real es un float
+print (real) #Representacion aproximada de 3.3 
+print (f'{real: .2f}')#Unicamente mostrando 2 cifras decimales
+
+un_real=1.1
+otro_real=1/2
+not_siend=1.23E3
+print (un_real)
+print (otro_real)
+print (not_siend)
+
+#Ejercio21 Elkin Diaz
+complejo=1 + 2j
+complejo.real
+complejo.imag
+print (complejo)
+print (complejo.real)
+print (complejo.imag)
+
+#Ejercio22 Elkin Diaz
+x=int(input("Ingrese un numero"))
+print(x!=5)
+print(x==5)
+print(x<=5)
+print(x>=5)
+#Ejercicio23 Diapositiva 42 Elkin Diaz
+b=x*0
+print (b)
+
+#Ejercio23 Elkin Diaz
+class EjemploBooleano:
+    def __bool__(self):
+        return False
+
+    def __len__(self):
+        return 0
+
+# Crear una instancia de la clase
+objeto_ejemplo = EjemploBooleano()
+
+# Evaluar el valor booleano de la instancia
+valor_booleano = bool(objeto_ejemplo)
+print(f'Valor booleano: {valor_booleano}')  
+
+# Obtener la longitud de la instancia
+longitud = len(objeto_ejemplo)
+print(f'Longitud: {longitud}') 
+
+#Ejercio24 Cadenas Elkin Diaz
+caracter_a='a'
+print (caracter_a)
+
+hola='Hola Pythonista"'
+hola_2='Hola\'Pythonista\''
+hola_3 = "Hola 'Pythonista'"
+
+print(hola)
+print(hola_2)
+print(hola_3)
+
+#Ejercio25 Tipos de Datos Elkin Diaz
+lista=[1, 2, 3, 8, 9]
+tupla=(1, 4, 8, 0, 5)
+conjunto=set ([1, 3, 1, 4])
+diccionario={'a': 1, 'b':3, 'z':8}
+
+print(lista)
+[1, 2, 3, 8, 9]
+print(tupla)
+(1, 4, 8, 0, 5)
+print(conjunto)
+{1, 3, 4}
+print(diccionario)
+{'a':1, 'b':3, 'z':8}
+
+#Ejercio26 Tipo de Datos Elkin Diaz
+type=(3)
+class_3='int'
+type_2_78=(2.78)
+class_2_78='float'
+type_Hola=('Hola')
+class_Hola='str'
+
+print(isinstance(3, float))  
+print(isinstance(3, int))    
+print(isinstance(3, bool))   
+print(isinstance(False, bool))
+
+#Ejercio27 Conocer el tipo de variable Elkin Diaz
+#Tipo de dato entero o largo
+numero=15
+print(numero, type (numero))
+
+#Tipo de dato flotante 
+numero_flotante=15.5
+print(numero_flotante, type (numero_flotante))
+
+#Tipo de Dato numero complejo 
+numero_complejo= 5 + 6j
+print(numero_complejo, type (numero_complejo))
+
+#Tipo de dato String
+nombre= "Ernesto"
+print(nombre, type (nombre))
+
+#Tipo de dato Booleano 
+verdadero_falso=3 ==3
+print(verdadero_falso, type (verdadero_falso))
+
+#Ejercio28 Conversión de Tipos Elkin Diaz
+edad=int('25')
+edad= edad + 10
+edad_1=float(234/455)
+
+print(edad)
+print(edad_1)
+
+#Ejercio29 Conversion de Tipos Elkin Diaz
+# Convierte edad a int y suma 10
+edad=2
+edad = int(edad) + 10
+print(edad)
+
+# Convierte edad a str
+edad = str(edad)
+print(edad)
+
+# Convierte un str a float
+numero_float = float('18.66')
+print(numero_float)
+
+# Intenta convertir un str no válido a float
+# Esto generará un ValueError, ya que 'hola' no es un número válido
+try:
+    numero_invalido = float('hola')
+except ValueError as e:
+    print(f"Error: {e}")
