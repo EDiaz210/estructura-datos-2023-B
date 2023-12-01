@@ -1,0 +1,72 @@
+#Ejercicio4 Elkin Diaz
+sueldoBase=float(input("Ingrese su sueldo:"))
+venta01= float(input("Ingrese el dinero de la venta 1 que realizo en el mes:"))
+venta02= float(input("Ingrese el dinero de la venta 2 que realizo en el mes:"))
+venta03= float(input("Ingrese el dinero de la venta 3 que realizo en el mes:"))
+totalDeVenta = venta01 + venta02 + venta03
+comision = totalDeVenta * 0.10 
+print("El pago por las ventas realizadas en el mes:", comision)
+total = sueldoBase + comision 
+print("El pago al mes es:", total)
+#Ejercicio5 Elkin Diaz
+notaPa1= float(input("Ingrese su primera calificacion del parcial:"))
+notaPa2= float(input("Ingrese su segunda calificacion del parcial:"))
+notaPa3= float(input("Ingrese su tercera calificacion del parcial:"))
+examen= float(input("Ingrese la calificaicon de su examen:"))
+trabajo= float(input("Ingrese la calificacion de su trabajo final:"))
+notasParciales= (notaPa1+notaPa1+notaPa3)*0.55
+notaExamen= examen*0.30
+notaTrabajo= trabajo*0.15 
+promedioFinal= (notasParciales+notaExamen+notaTrabajo)/3
+print("Su promedio final es:", promedioFinal) 
+#Ejercicio6 Elkin Diaz
+import math
+
+x1= (float(input("iNGRESE X1")))
+x2=(float(input("iNGRESE X2")))
+y1=(float(input("iNGRESE y1")))
+y2=(float(input("iNGRESE y2")))
+
+respuesta= (math.sqrt(pow(x2-x1,2)+pow(y2-y1,2)))
+print (respuesta)
+#Ejercicio7 Elkin Diaz
+
+num=int(input("Dijite un numero entero positivo : "))
+print (num)
+
+num= str(num)[::-1]
+
+print (num)
+#Ejercicio8 Elkin Diaz
+V1 = float(input("Ingrese la velocidad del primer vehiculo: "))
+V2 = float(input("Ingrese la velocidad del segundo vehiculo: "))
+d=float(input("Ingrese la distancia entre ambos vehiculos: "))
+ 
+t = 60 * (d /(V1-V2))
+print (t)
+#Ejercicio9 Elkin Diaz
+
+nombre = input("Ingrese su nombre:")
+apellido1 = input("Ingrese su primer apellido:")
+apellido2 = input("Ingrese su segundo apellido:")
+
+inicial = nombre[0]
+inicial = inicial + apellido1[0]
+inicial = inicial + apellido2[0]
+
+inicial = inicial.upper()
+print("Las iniciales son:",inicial)
+#Ejercicio10 Elkin Diaz
+
+euro2 = int(input("Monedas de 2 euros:"))
+euro1 = int(input("Monedas de 1 euro:"))
+cent50 = int(input("Monedas de 50 céntimos:"))
+cent20 = int(input("Monedas de 20 céntimos:"))
+cent10 = int(input("Monedas de 10 céntimos:"))
+total_euros = euro2 * 2 + euro1
+total_centimos = cent50 * 50 + cent20 * 20 + cent10 * 10
+total_euros = total_euros + total_centimos // 100
+total_centimos = total_centimos % 100
+print(total_euros," euros y",total_centimos," céntimos.")
+
+
