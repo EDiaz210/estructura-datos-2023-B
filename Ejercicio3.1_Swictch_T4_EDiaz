@@ -1,0 +1,32 @@
+#Ejercicio3.1 Elkin Diaz
+print("Bienvenido a la Calculadora Lyxuz")
+print("Elija la operación que desea realizar\n" "1) Suma\n" "2) Resta\n" "3) Multiplicación\n" "4) División" )
+digito=int(input("Digite el número de la operación que va a realizar: "))
+match digito:
+    case 1:
+         v1 = float(input("Digite el valor del número 1: "))
+         v2 = float(input("Digite el valor del número 2: "))
+         resultado=v1+v2
+         print("El resultado de la suma es:", resultado)
+    case 2:
+        v1 = float(input("Digite el valor del número 1: "))
+        v2 = float(input("Digite el valor del número 2: "))
+        resultado=v1-v2
+        print("El resultado de la resta es:", resultado)
+    case 3:
+        v1 = float(input("Digite el valor del número 1: "))
+        v2 = float(input("Digite el valor del número 2: "))
+        resultado=v1*v2
+        print("El resultado de la multiplicación es:", resultado)
+    case 4:
+        v1 = float(input("Digite el valor del número 1: "))
+        v2 = float(input("Digite el valor del número 2: "))
+        if v2>0:
+            resultado = v1 / v2
+            print("El resultado de la división es:", resultado)
+        else:
+            print("Syntax ERROR")
+            exit
+    case defaul:
+        print("Digite el valor correcto")
+        exit
