@@ -1,0 +1,60 @@
+nombre=input("Ingrese en su nombre:")
+dato=input("Ingrese su cedula:")
+correo=input("Ingrese su correo:")
+print("Bienvenidos a la Hamburguesa Carbonero Lyxuz")
+print("Nombre de la persona:",nombre)
+print("Su cédula es:", dato)
+print("Su correo es:", correo)
+
+print("Le ofrecemos tipos de hamburgesas\n" "1) sencilla\n" "2) doble \n" "3) triple" )
+hamburguesa= int(input("Digite el número de la hamburguesa que va pedir: "))
+if hamburguesa>0 and hamburguesa<=3:
+    num1=int(input("Cuantas hamburguesa deseas: "))
+    if hamburguesa==1:
+        total=num1*hamburguesa*1.5
+        print("Debe cancelar:", total)
+        print("Desea pagar en efectivo o en tarjeta de credito \n" "1) efectivo\n" "2) tarjeta de credito")
+        forma=int(input("Digite el valor de fomar de pago:"))
+        if forma>0 and forma<=2:
+            if forma==1:
+                total2=total
+                print ("El valor a pagar es: ", total2)
+            elif forma==2:
+                total2=(total*0.05)+total
+                print("El valor a pagar es: ",total2)
+        else:
+            print("Digite el numero correcto")
+            exit           
+    elif hamburguesa==2:
+        total=num1*hamburguesa*2.5
+        print("Debe cancelar:", total)
+        print("Desea pagar en efectivo o en tarjeta de credito \n" "1) efectivo\n" "2) tarjeta de credito")
+        forma=int(input("Digite el valor de fomar de pago:"))
+        if forma>0 and forma<=2:
+            if forma==1:
+                total2=total
+                print ("El valor a pagar es: ", total2)
+            elif forma==2:
+                total2=(total*0.05)+total
+                print("El valor a pagar es: ",total2)
+        else:
+            print("Digite el numero correcto")
+            exit    
+             
+    elif hamburguesa==3:
+        total=num1*hamburguesa*3.5
+        print("Debe cancelar:", total)
+        print("Desea pagar en efectivo o en tarjeta de credito \n" "1) efectivo\n" "2) tarjeta de credito")
+        forma=int(input("Digite el valor de fomar de pago:"))
+        if forma>0 and forma<=2:
+            if forma==1:
+                total2=total
+                print ("El valor a pagar es: ", total2)
+            elif forma==2:
+                total2=(total*0.05)+total
+                print("El valor a pagar es: ",total2)
+        else:
+            print("Digite el numero correcto")
+            exit        
+else:
+    print("Error digite el número correcto")
