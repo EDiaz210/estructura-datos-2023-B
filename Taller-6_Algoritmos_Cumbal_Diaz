@@ -1,0 +1,748 @@
+#Ejercicio 1 
+"""
+numero = int (input("Ingrese el numero que desea: "))
+suma=0
+suma_formato=""
+if (numero<=0):
+    print("Recuerde que el numero que dijito debe ser mayor que 0.")
+else:
+    for m in range(1, numero+1):
+         print(m)
+         if(m%2==0):
+             suma+=m
+             
+print(f'La suma de los numeros pares es: {suma}')
+"""
+#Ejercicio 2 
+"""          
+print("Automotores Chevrolet")
+print("Menú de opciones")
+print("1) Verificar el estado de los talleres")
+print("2) Salir")
+opcion = int(input("Ingrese la opción: "))
+
+while (opcion >=3): 
+  print("Recuerde las opciones")
+  print("1.- Verificar el estado de los talleres")
+  print("2.- Salir")
+  opcion = int(input("Ingrese la opción: "))
+
+while (opcion ==1):
+  print("Ejecutar caso 1")
+  contador_fugas = 0
+  talleres = 1
+  while (talleres <= 3):
+    print("Existe fuga en el taller ", talleres)
+    estado = int(input("Ingrese 1) si o 2) no: "))
+    if (estado>=3):
+        print("Digite bien los números")
+    elif (estado == 1):
+      contador_fugas += 1
+    talleres += 1
+  if (contador_fugas <= 1):
+      print("No se realizara ninguna acción")
+  elif (contador_fugas > 1):
+      print("Enviar correo")
+
+  print("1.- Verificar el estado de los talleres")
+  print("2.- Salir")
+  opcion = int(input("Ingrese la opción: "))
+
+  while (opcion >=3):
+    print("Recuerde las opciones")
+    print("1.- Verificar el estado de los talleres")
+    print("2.- Salir")
+    opcion = int(input("Ingrese la opción: "))
+print("Good Bye...")
+"""
+#Ejercicio 3 
+"""
+punto_inicial = int(input("Ingrese el punto inicial: "))
+punto_final = int(input("Ingrese el punto final: "))
+suma = 0
+
+
+while punto_inicial > punto_final:
+
+    print("No valido, El punto inicial debe ser menor que el final")
+    puntoInicial = int(input("Ingrese el punto inicial: "))
+    puntoFinal = int(input("Ingrese el punto final: "))
+    
+while (punto_inicial<0 or punto_final<0):
+
+    print("No valido, Deben ser valores positivos")
+    puntoInicial = int(input("Ingrese el punto inicial: "))
+    puntoFinal = int(input("Ingrese el punto final: "))
+    
+    while (punto_inicial > punto_final):
+        print("No valido, El punto inicial debe ser menor que el final")
+        punto_inicial = int(input("Ingrese el punto inicial: "))
+        punto_final = int(input("Ingrese el punto final: "))
+
+while punto_inicial <= punto_final:
+    suma = suma + punto_inicial
+    punto_inicial = punto_inicial + 1
+
+print(f'La sumatoria es: {suma}')
+"""
+#Ejercicio 4
+"""
+print("Bienvenido a la escuela Fe y Alegria")
+ncali= 4
+total= 0.0
+for i in range(1,5):
+  print(f"Ingresa la calificación {i}: ",end="")
+  calificaciones = float(input())
+  total += calificaciones
+print("La suma de calificaciones es: ",total)
+promedio = total/ncali
+print("El promedio de las calificaciones es: ",promedio)
+if promedio >=14:
+  print("Aprobado")
+elif (9 <= promedio <= 13):
+  print("Supletorio")
+elif promedio <= 8:
+  print("Rechazado")
+"""
+#Ejercicio 5
+"""
+numero = int(input("Ingrese un número entero positivo en el intervalo de 10-100: "))
+
+while numero<0 or numero ==0 :
+  print("número debe ser un entero positivo")
+  numero = int(input("Ingrese un número entero positivo en el intervalo de 10-100: "))
+
+if 10<=numero<=100:
+  print("El número si pertenece al rango")
+else:
+  print("El número no pertenece al rango")
+"""
+#Ejercicio 6
+"""
+print("Bienvenido al Banco Pichincha")
+
+nombreCliente=input("Ingrese el nombre del cliente: ")
+print("Ingrese el tipo de tarjeta")
+tipoTarjeta = int(input("1) o 2) o 3) o 4): "))
+
+while (tipoTarjeta!=1 and tipoTarjeta!=2 and tipoTarjeta!=3 and tipoTarjeta!=4):
+  print("Tipo de tarjeta no válido")
+  print("Ingrese el tipo de tarjeta")
+  tipoTarjeta = int(input("1) o 2) o 3) o 4): "))
+
+creditoAnterior= float((input("Ingrese el crédito actual: ")))
+creditoActual = 0.0
+
+
+def creditoBanco (tipoTrajeta):
+  if tipoTarjeta == 1:
+    creditoActual = creditoAnterior + (creditoAnterior * 0.25)
+    print("El nuevo crédito para su tarjeta es de: ",creditoActual)
+  elif tipoTarjeta == 2:
+    creditoActual = creditoAnterior + (creditoAnterior * 0.35)
+    print("El nuevo crédito para su tarjeta es de: ",creditoActual)
+  elif tipoTarjeta == 3:
+    creditoActual = creditoAnterior + (creditoAnterior * 0.40)
+    print("El nuevo crédito para su tarjeta es de: ",creditoActual)
+  else:
+    creditoActual = creditoAnterior + (creditoAnterior * 0.50)
+    print("El nuevo crédito para su tarjeta es de: ",creditoActual)
+
+creditoBanco(tipoTarjeta)
+"""
+#Ejercicio 7
+"""
+print(" Bienvenido a Etafashion")
+prendasVestir = int(input("Ingrese el número de prendas: "))
+while prendasVestir<=0:
+  print("Debe ingresar un número valido de prendas")
+  prendasVestir = int(input("Ingrese el número de prendas: "))
+
+compraTotal = float(input("Ingrese el total de la compra: "))
+
+valorFinal=0.0
+while compraTotal<=0:
+  print("Debe ingresar el total real")
+  compraTotal = int(input("Ingrese el total de las compras: "))
+
+compraTotal = float(input("Ingrese el total de la compra: "))
+if prendasVestir>20:
+  valorFinal = compraTotal + (compraTotal*0.10)
+  print("El valor a pagar es de: ",valorFinal)
+elif 10<=prendasVestir<=20:
+  valorFinal = compraTotal + (compraTotal*0.05)
+  print("El valor a pagar es de: ",valorFinal)
+elif prendasVestir<=9:
+  print("El valor a pagar es de: ",compraTotal)
+"""
+#Ejercicio 8
+"""
+print("LA UNION")
+print(" ")
+nombre = input("Estimado cliente inserte su nombre: \n")
+numero_guaguas = int (input ("Ingrese el numero de guaguas de pan que desea: \n"))
+contador_guaguas = 1
+guaguas_mora = 0
+suma_guaguas = 0
+
+while contador_guaguas <= numero_guaguas:
+    precio = float (input ("Ingrese el precio de la guagua: "))
+    suma_guaguas = suma_guaguas + precio
+    sabor = int (input ("Seleccion el sabor de la guagua de pan: \n 1. Mora \n 2.Manjar \n"))
+    while sabor != 1 and sabor != 2:
+        print ("Ingrese un sabor valido")
+        sabor = int (input ("Seleccion el sabor de la guagua de pan: \n 1. Mora \n 2.Manjar \n"))    
+    if sabor == 1:
+        guaguas_mora = guaguas_mora + 1
+    contador_guaguas = contador_guaguas + 1
+
+print ("\n Factura \n")
+print ()
+print ("Estimado ",nombre )
+print ("El precio a pagar es de: ",suma_guaguas)
+print ("El total de guaguas de pan de mora es de: ",guaguas_mora)
+print ("--**-- Vuelva pronto --**--")
+"""
+#Ejercicio 9
+"""
+num_empleados = int(input("Ingrese el número de empleados:\n "))
+num_profesores = 0
+total_horas_trabajadas = 0
+totsueldo = 0
+total_sueldo_profesores = 0
+total_sueldo_no_profesores = 0
+
+for i in range(1, num_empleados + 1):
+    print(f"\nEmpleado {i}:")
+    horas_trabajadas = int(input("Ingrese el número de horas trabajadas: \n"))
+    print(" Es profesor ")
+    es_profesor = input("Si (1) | no(2) ): ").upper() == '1'
+    sueldo = float(input("Inserte el sueldo del empleado: \n"))
+    total_horas_trabajadas += horas_trabajadas
+    totsueldo += sueldo
+    if es_profesor:
+        num_profesores += 1
+        total_sueldo_profesores += sueldo
+    else:
+        total_sueldo_no_profesores += sueldo
+
+print("\nNúmero total de profesores: ",num_profesores)
+print("Suma total de horas trabajadas: ", total_horas_trabajadas)
+print("Suma total de sueldos: ", totsueldo)
+print("Suma total de sueldos de profesores: ", total_sueldo_profesores)
+print("Suma total de sueldos de no profesores: ", total_sueldo_no_profesores)
+"""
+#Ejercicio 10
+"""
+while True:
+    print("\Menú de Televisión/")
+    print("Opciones para ver en el televisor")
+    print("1. Noticias ")
+    print("2. Deportes ")
+    print("3. Spotify ")
+    print("4. Amazon Prime ")
+    print("5. Netflix ")
+    print("6. carton network ")
+    print("7. Youtube")
+    print("8. HDMI ")
+    print("0. Volver al menu central")
+    print("9. APAGAR TELEVISOR")
+    opcion = input("Selecciona una opción a su conveniencia: \n")
+    if opcion == '1':
+        print(" 1. Nacionales ")
+        print(" 2. Internacionales\n")
+        print(" 0. para regresar al menu central \n 9. para apagar el televisor: \n")
+        noti = input("Que tipo de noticias desea ver: ")
+        if noti == '1':
+            print("Usted está viendo noticias Nacionales\n")
+            note = input(" 0. para regresar al menu central \n9. para apagar el televisor:\n ")
+            if note == '0':
+                continue
+            elif note == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+        elif noti == '2':
+            print("Usted está viendo noticias Internacionales")
+            note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+            if note == '0':
+                continue
+            elif note == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+        elif noti == '0':
+            continue
+        elif noti == '9':
+            print("Apagando la televisión. ¡Hasta luego!")
+            break
+        else:
+            print("Escoja una de las opciones indicadas")
+            noti = input("Que tipo de noticias desea ver: ")
+    elif opcion == '2':
+        print(" 1. Basquet ")
+        print(" 2. Futbol ")
+        print(" 3. Formula 1 ")
+        print(" 0. para regresar al menu central \n 9. para apagar el televisor: ")
+        noti2 = input("Que tipo de deporte desea ver: ")
+        if noti2 == '1':
+            print("Sintonizando en  un canal de Basquet")
+            print("\n canal encontrado")
+            print("Partido de lakers vs Warriors")
+            note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+            if note == '0':
+                continue
+            elif note == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+        elif noti2 == '2':
+            print("Sintonizando en canal de Futbol")
+            print("\n canal encontrado")
+            print("Partidos de la copa Champions")
+            note = input(" 0. para regresar al menu central \n 9. para apagar el televisor: \n")
+            if note == '0':
+                continue
+            elif note == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+        elif noti2 == '3':
+            print("Sintonizando en la formula 1")
+            print("\n canal encontrado")
+            print("Giro de italia")
+            note = input(" 0. para regresar al menu central \n 9. para apagar el televisor: \n")
+            if note == '0':
+                continue
+            elif note == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+        elif noti2 == '0':
+            continue
+        elif noti2 == '9':
+            print("Apagando la televisión. ¡Hasta luego!")
+            break
+        else:
+            print("Escoja una de las opciones indicadas")
+            noti2 = input("Que tipo de deporte desea ver: ")
+    elif opcion == '3':
+        print("entrando a spotify\n")
+        print("Sintonizando en canciones más escuchadas")
+        opi = input(" 0. para regresar al menu central \n 9. para apagar el televisor: ")
+        if  opi == '0':
+            continue
+        elif opi == '9':
+            print("Apagando la televisión. ¡Hasta luego!")
+            break
+    elif opcion == '4':
+        print("Cambiando a Amazon prime")
+        print("Opciones que ofrece Amazon")
+        print(" ")
+        print(" 1. Peliculas ")
+        print(" 2. Documentales ")
+        print(" 3. Series")
+        print(" 0. para regresar al menu central \n 9. para apagar el televisor: ")
+        noti3 = input("Que desea ver: ")
+        if noti3 == '1':
+            print("Sintonizando en peliculas")
+            print(" 1. Terror ")
+            print(" 2. Comedia romantica ")
+            print(" 3. Ciencia ficción ")
+            print(" 0. para regresar al menu central \n 9. para apagar el televisor: ")
+            peli = input("Que tipo de película desea ver: ")
+            if peli == '1':
+                print("Usted está viendo el canal de películas")
+                print("\n genero ")
+                print("-* Terror *-")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif peli == '2':
+                print("Usted está viendo el canal de películas")
+                print("\n genero ")
+                print("-*- Comedia romantica -*-")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif peli == '3':
+                print("Usted está viendo el canal de películas")
+                print("\n genero ")
+                print("/-*\\ Ciencia ficción /-*-\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif peli == '0':
+                continue
+            elif peli == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break    
+            else:
+                print("Escoja una de las opciones indicadas")
+            peli = input("Que tipo de película desea ver: ")
+        elif noti3 == '2':
+            print("Sintonizando en Documentales")
+            print("1. Naturaleza")
+            print("2. Vida animal")
+            print("Presione 0 para regresar al menu central \nPresione 9 para apagar el televisor: ")
+            docu = input("Que tipo de documental desea ver: ")
+            if docu == '1':
+                print("Usted esta viendo el canal de documentales")
+                print("\n Genero:")
+                print("// Naturaleza\\\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif docu == '2':
+                print("Usted esta viendo el canal de documentales")
+                print("\n Genero:")
+                print("// Vida animal\\\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif docu == '0':
+                continue
+            elif docu == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+            else:
+                print("Escoja una de las opciones indicadas")
+                docu = input("Que tipo de documental desea ver: ")
+        elif noti3 == '3':
+            print("Sintonizando en Series")
+            print(" 1. koreanas ")
+            print(" 2. Americanas ")
+            print(" 3. Mexicanas ")
+            print(" 0. para regresar al menu central \n 9. para apagar el televisor: ")
+            seri = input("Que tipo de serie desea ver: ")
+            if seri == '1':
+                print("Usted esta viendo series")
+                print("\n Genero:")
+                print("// Koreano\\\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif seri == '2':
+                print("Usted esta viendo series")
+                print("\n Genero:")
+                print("// Americano \\\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif seri == '2':
+                print("Usted esta viendo series")
+                print("\n Genero:")
+                print("// mexicano \\\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif seri == '0':
+                continue
+            elif seri == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break    
+            else:
+                print("Escoja una de las opciones indicadas")
+                seri = input("Que tipo de serie desea ver: ")
+        elif docu == '0':
+                continue
+        elif docu == '9':
+            print("Apagando la televisión. ¡Hasta luego!")
+            break
+        else:
+            print("Escoja una de las opciones indicadas")
+            noti3 = input("Que desea ver: ")   
+    elif opcion == '5':
+        print("Cambiando a Netflix")
+        print("Opciones que ofrece Netflix")
+        print(" ")
+        print(" 1. Peliculas ")
+        print(" 2. Documentales ")
+        print(" 3. Series")
+        print(" 0. para regresar al menu central \n 9. para apagar el televisor: ")
+        noti4 = input("Que desea ver: ")
+        if noti4 == '1':
+            print("Sintonizando en peliculas")
+            print("1. Terror ")
+            print("2. Comedia romantica ")
+            print("1. Ciencia ficción ")
+            peli2 = input("Que tipo de película desea ver: ")
+            if peli2 == '1':
+                print("Usted está viendo el canal de películas")
+                print("\n genero ")
+                print("-* Terror *-")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif peli2 == '2':
+                print("Usted está viendo el canal de películas")
+                print("\n genero ")
+                print("-*- Comedia romantica -*-")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif peli2 == '3':
+                print("Usted está viendo el canal de películas")
+                print("\n genero ")
+                print("/-*\\ Ciencia ficción /-*-\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif peli2 == '0':
+                continue
+            elif peli2 == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+            else:
+                print("Escoja una de las opciones indicadas")
+                peli2 = input("Que tipo de película desea ver: ")
+        elif noti4 == '2':
+            print("Sintonizando en Documentales")
+            print(" 1. Naturaleza")
+            print(" 2. Vida animal")
+            print(" 0. para regresar al menu central \n 9. para apagar el televisor: ")
+            docu2 = input("Que tipo de documental desea ver: ")
+            if docu2 == '1':
+                print("Usted esta viendo el canal de documentales")
+                print("\n Genero:")
+                print("// Naturaleza\\\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break 
+            elif docu2 == '2':
+                print("Usted esta viendo el canal de documentales")
+                print("\n Genero:")
+                print("// Vida animal\\\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif docu2 == '0':
+                continue
+            elif docu == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+            else:
+                print("Escoja una de las opciones indicadas")
+                docu2 = input("Que tipo de documental desea ver: ")
+        elif noti4 == '3':
+            print("Sintonizando en Series")
+            print(" 1. koreanas ")
+            print(" 2. Americanas ")
+            print(" 3. Mexicanas ")
+            print(" 0. para regresar al menu central \n 9. para apagar el televisor: ")
+            seri2 = input("Que tipo de serie desea ver: ")
+            if seri2 == '1':
+                print("Usted esta viendo series")
+                print("\n Genero:")
+                print("// Koreano\\\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif seri2 == '2':
+                print("Usted esta viendo series")
+                print("\n Genero:")
+                print("// Americano \\\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif seri2 == '2':
+                print("Usted esta viendo series")
+                print("\n Genero:")
+                print("// mexicano \\\\")
+                note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+                if note == '0':
+                    continue
+                elif note == '9':
+                    print("Apagando la televisión. ¡Hasta luego!")
+                    break
+            elif seri2 == '0':
+                continue
+            elif seri2 == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+            else:
+                print("Escoja una de las opciones indicadas")
+                seri2 = input("Que tipo de serie desea ver: ")
+        elif noti4 == '0':
+                continue
+        elif noti4 == '9':
+            print("Apagando la televisión. ¡Hasta luego!")
+            break
+        else:
+            print("Escoja una de las opciones indicadas")
+            noti4 = input("Que desea ver: ")  
+    elif opcion == '6':
+        print("Sintonizando Cartoon Network")
+        print("Usted está viendo el canal de carton network")
+        print("Programa en emisión actual: ")
+        print("---/ El increible Mundo de Gumball \---")
+        opi2 = input(" 0. para regresar al menu central \n 9. para apagar el televisor: ")
+        if opi2 == '0':
+            continue
+        elif opi2 == '9':
+            print("Apagando la televisión. ¡Hasta luego!")
+            break
+    elif opcion == '7':
+        print("Cambiando a youtube")
+        print(" 1. Música ")
+        print(" 2. Streamers ")
+        print(" 3. Tutoriales")
+        print(" 0. para regresar al menu central \n 9. para apagar el televisor: ")
+        noti5 = input("Que desea ver en Youtube: ")
+        if noti5 == '1':
+            print("Reproduciendo múisca del monento")
+            print("Canción en curso - Mecha/Chano ")
+            note = input(" 0. para regresar al menu central \n9. para apagar el televisor: \n")
+            if note == '0':
+                continue
+            elif note == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+        elif noti5 == '2':
+            print(" 1. Misasinfonia")
+            print(" 2. Farfadox ")
+            print(" 3. Amilcar")
+            str = input("A que Youtuber desea ver: ")
+            print("******---******\n")
+            print(" 0. para regresar al menu central \n 9. para apagar el televisor: ")
+            if str != '1' and str != '2' and str != '3':
+                print(" Ingrese solo las opciones mencionadas ")
+                str = input("A que Youtuber desea ver: ")
+            if str == '0':
+                continue
+            elif str == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+            else:
+                print("Reproduciendo contenido de ", str)
+        elif noti5 == '2':
+            print(" 1. Cocina")
+            print(" 2. Arreglos ")
+            print(" 3. Manualidades")
+            tuto = input("Que tutorial desea ver: ")
+            print("******---******\n")
+            print(" 0. para regresar el menu central \n 9. para apagar el televisor: ")
+            if tuto != '1' and tuto != '2' and tuto != '3':
+                print(" Ingrese solo las opciones mencionadas ")
+                tuto = input("Que tutorial desea ver: ")
+            print("Presione 0 para regresar al menu central \nPresione 9 para apagar el televisor: ")
+            if tuto != '1' and tuto != '2' and tuto != '3':
+                print(" Ingrese solo las opciones mencionadas ")
+                tuto = input("Que tutorial desea ver: ")
+            if tuto == '0':
+                continue
+            elif tuto == '9':
+                print("Apagando la televisión. ¡Hasta luego!")
+                break
+            else:
+                print("Reproduciendo tutorial de ", tuto)
+        else:
+            print("Escoja una de las opciones indicadas")
+            noti5 = input("Que desea ver en Youtube: ")
+
+    elif opcion == '8':
+        print("Señala HDMI detectada\n")
+        print(" 1. HDMI-1/Playstation" )
+        print(" 2. HDMI-2/Segunda pantalla-pc")
+        print("0. para regresar al menu central \n 9. para apagar el televisor: ")
+        hd = input("A cual de las conexiones HDMI desea conectarse: ")
+        if hd != '1' and hd != '2':
+            print(" Ingrese solo las opciones mencionadas ")
+            hd = input("A cual de las conexiones HDMI desea conectarse: ")
+        elif hd == '0':
+                continue
+        elif hd == '9':
+            print("Apagando la televisión. ¡Hasta luego!")
+            break
+        else:
+            print("Conectando a ", hd)
+    elif opcion == '9':
+        print("Apagando la televisión. ¡Hasta luego!")
+        break
+    else:
+        print( "Opción no válida.")
+        print( "Escoja una de las opciones presentadas")
+"""
+#Ejercicio 11
+"""
+print("**PRODUBANCO***")
+print("Bienvenido al sistema")
+print("Inserte sus credenciales")
+usuario = input("Ingrese su usuario: ")
+contraseña = input("Ingrese su contraseña: ")
+
+while usuario != "Juan" or contraseña != "123":
+    print("Incorrecto")
+    usuario = input("Ingrese su usuario: ")
+    contraseña = input("Ingrese su contraseña: ")
+
+opcion = 0
+total = 0
+ahorro_anual = 0
+while opcion != 4:
+    print("1. Depositar")
+    print("2. Retirar")
+    print("3. Consultar")
+    print("4. Salir")
+    opcion = int(input("Seleccione una opcion: "))
+    while opcion not in [1, 2, 3, 4]:
+        opcion = int(input("Seleccione una opcion: "))
+    if opcion == 1:
+        mes = input("Inserte el mes: ")
+        cantidad = float(input(f"Ingrese la cantidad a depositar en {mes}: "))
+        while cantidad <= 0:
+            print("Valor ingresado inválido")
+            cantidad = float(input(f"Ingrese la cantidad a depositar en {mes}: "))
+        total += cantidad
+        ahorro_anual += cantidad
+    elif opcion == 2:
+        cantidad = float(input("Ingrese la cantidad a retirar: "))
+        while cantidad <= 0 or cantidad > total:
+            print("Valor ingresado inválido")
+            cantidad = float(input("Ingrese la cantidad a retirar: "))
+        total -= cantidad
+    elif opcion == 3:
+        print("Su saldo actual es: ", total)
+
+print("El ahorro total al final del año es:", ahorro_anual)
+"""
